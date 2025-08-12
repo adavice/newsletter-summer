@@ -119,6 +119,7 @@ function selectAnswer(selectedBtn, character) {
         btn.classList.remove("bg-[var(--yellow)]")
     );
     // Highlight selected button
+    selectedBtn.classList.remove("bg-white");
     selectedBtn.classList.add("bg-[var(--yellow)]");
     // Store character vote
     selectedBtn.dataset.character = character;
