@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --purple: #b088c4;
+  --yellow: #fee798;
+  --orange: #ff914d;
+  --turquoise: #7acbcb;
+  --beige: #fdf6ee;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Caveat", cursive;
+  font-style: italic;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.bg-1 {
+  background-image: url("../img/bg-1.webp");
+  background-color: #00000080;
+  background-position: center;
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-2 {
+  background-image: url("../img/bg-2.jpg");
+  background-color: #00000080;
+  background-position: center;
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#videoDiv {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+  font-size: 0.85rem;
+  user-select: none;
+}
+.weekday {
+  font-weight: 600;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #ccc;
+}
+.day-cell {
+  position: relative;
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  border-radius: 0.5rem;
+  cursor: default;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.day-cell:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+.tooltip {
+  color: #000;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 6px 12px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  font-weight: normal;
+  font-size: 0.75rem;
+  z-index: 20;
+}
+.day-cell:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Colors */
+.holiday {
+  background-color: #ff4d4d;
+  color: white;
+}
+.birthday {
+  background-color: #ffd95a;
+  color: #444;
+}
+.anniversary {
+  background-color: #7acbcb;
+  color: #fff;
+}
+.empty {
+  background: transparent;
+  cursor: default;
+  font-weight: normal;
+}
+.container-grid {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+g rect {
+  fill: transparent;
+  stroke-width: 1;
+  stroke: #fff;
+  fill-opacity: 1;
+}
+
+.cx-c {
+  font-size: 14px;
+  font-family: monospace;
+  pointer-events: none;
+  font-weight: bold;
+  fill: #fff;
+  text-anchor: start;
+}
+
+.cx-a {
+  font-size: 32px;
+  font-family: monospace;
+  text-anchor: middle;
+  pointer-events: none;
+  fill: #fff;
+}
+
+.cx-b {
+  fill: #fff;
+}
+
+@media (max-width: 1200px) {
+  .last-row {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .container-grid article {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .day-cell {
+    width: 2.2rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+  }
+}

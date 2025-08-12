@@ -9,165 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;family=Roboto+Condensed:wght@300;400;700&amp;display=swap"
       rel="stylesheet"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
-      :root {
-        --purple: #b088c4;
-        --yellow: #fee798;
-        --orange: #ff914d;
-        --turquoise: #7acbcb;
-        --beige: #fdf6ee;
-      }
-
-      h1,
-      h2,
-      h3 {
-        font-family: "Caveat", cursive;
-        font-style: italic;
-      }
-
-      body {
-        font-family: "Lato", sans-serif;
-      }
-
-      .bg-1 {
-        background-image: url("img/bg-1.webp");
-        background-color: #00000080;
-        background-position: center;
-        background-blend-mode: color;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      .bg-2 {
-        background-image: url("img/bg-2.jpg");
-        background-color: #00000080;
-        background-position: center;
-        background-blend-mode: color;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      #videoDiv {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
-
-    <style>
-      .calendar-grid {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 6px;
-        text-align: center;
-        font-size: 0.85rem;
-        user-select: none;
-      }
-      .weekday {
-        font-weight: 600;
-        padding-bottom: 4px;
-        border-bottom: 2px solid #ccc;
-      }
-      .day-cell {
-        position: relative;
-        width: 2.6rem;
-        height: 2.6rem;
-        line-height: 2.6rem;
-        border-radius: 0.5rem;
-        cursor: default;
-        font-weight: 600;
-        transition: box-shadow 0.3s ease;
-        cursor: pointer;
-      }
-      .day-cell:hover {
-        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
-        z-index: 10;
-      }
-      .tooltip {
-        color: #000;
-        position: absolute;
-        bottom: 120%;
-        left: 50%;
-        transform: translateX(-50%);
-        background: white;
-        padding: 6px 12px;
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        white-space: nowrap;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.25s ease;
-        font-weight: normal;
-        font-size: 0.75rem;
-        z-index: 20;
-      }
-      .day-cell:hover .tooltip {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      /* Colors */
-      .holiday {
-        background-color: #ff4d4d;
-        color: white;
-      }
-      .birthday {
-        background-color: #ffd95a;
-        color: #444;
-      }
-      .anniversary {
-        background-color: #7acbcb;
-        color: #fff;
-      }
-      .empty {
-        background: transparent;
-        cursor: default;
-        font-weight: normal;
-      }
-      .container-grid {
-        max-width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @media (max-width: 960px) {
-        .last-row {
-          grid-column: span 3;
-          display: flex;
-          justify-content: center;
-          gap: 2rem;
-        }
-
-        .container-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .container-grid {
-          grid-template-columns: repeat(1, 1fr);
-        }
-
-        .container-grid article {
-          width: 100%;
-        }
-
-        .day-cell {
-          width: 2.2rem;
-          height: 2.2rem;
-          line-height: 2.2rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
   </head>
 
   <body class="bg-[var(--beige)] text-gray-800">
-    <!-- Cover Page -->
     <section class="bg-[var(--purple)] text-white py-20 px-6 text-center">
       <h1 class="text-5xl font-extrabold mb-2">The Office F.R.I.E.N.D.S</h1>
       <p class="text-xl uppercase tracking-widest mb-8">July 2025</p>
@@ -194,7 +40,6 @@
       </p>
     </section>
 
-    <!-- Central Perk News -->
     <section class="bg-1 py-16 px-8">
       <h2 class="text-4xl font-bold text-center mb-8 text-white">
         Central Perk News ☕
@@ -258,7 +103,6 @@
       </div>
     </section>
 
-    <!-- The One with the Newbies -->
     <section class="bg-[var(--yellow)] py-16 px-8 text-black">
       <h2 class="text-4xl font-bold text-center mb-8">
         The One with the Newbies 👋
@@ -454,13 +298,10 @@
         id="quizContainer"
         class="max-w-2xl mx-auto bg-[var(--beige)] p-6 rounded-xl shadow"
       >
-        <!-- Question Text -->
         <p id="questionText" class="text-xl font-semibold mb-6"></p>
 
-        <!-- Answer Buttons -->
         <div id="answersContainer" class="space-y-4"></div>
 
-        <!-- Next Button -->
         <button
           id="nextBtn"
           disabled
@@ -470,7 +311,6 @@
         </button>
       </div>
 
-      <!-- Result Section -->
       <div id="resultContainer" class="hidden mt-8">
         <h3
           id="resultTitle"
@@ -480,7 +320,6 @@
       </div>
     </section>
 
-    <!-- Travel Postcards Section -->
     <section class="bg-white py-16 px-6">
       <h2 class="text-4xl font-bold text-[var(--orange)] mb-8 text-center">
         The One with the Conference 🎓
@@ -490,9 +329,7 @@
         time.
       </p>
 
-      <!-- Grid for postcards -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <!-- Postcard -->
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
@@ -513,7 +350,6 @@
           </div>
         </div>
 
-        <!-- Postcard -->
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
@@ -534,7 +370,6 @@
           </div>
         </div>
 
-        <!-- Postcard -->
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
@@ -561,7 +396,6 @@
           </div>
         </div>
 
-        <!-- Postcard -->
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
@@ -601,7 +435,6 @@
         </div>
       </div>
 
-      <!-- Footer text -->
       <div class="text-center mt-12 max-w-2xl mx-auto mb-5">
         <p class="text-lg">
           Stay tuned — the next destination might be your name in bold. 🌍
@@ -648,53 +481,41 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-
-            <!-- August 1 is Friday, so Mon(28 Jul) Tue(29 Jul) Wed(30 Jul) Thu(31 Jul) empty -->
             <div class="empty"></div>
             <div class="empty"></div>
             <div class="empty"></div>
             <div class="empty"></div>
-
             <div class="day-cell">1</div>
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
-
-            <!-- Aug 4 Anniversary (turquoise) -->
             <div class="day-cell anniversary" tabindex="0">
               4
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Alina Heorhieva – Anniversary 🎊 ☕
               </div>
             </div>
-
             <div class="day-cell">5</div>
             <div class="day-cell">6</div>
             <div class="day-cell">7</div>
             <div class="day-cell">8</div>
-
-            <!-- Aug 9 Anniversary (turquoise) -->
             <div class="day-cell anniversary" tabindex="0">
               9
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Viktoria Kleban – Anniversary 🎉 ☕
               </div>
             </div>
-
             <div class="day-cell">10</div>
             <div class="day-cell">11</div>
             <div class="day-cell">12</div>
             <div class="day-cell">13</div>
             <div class="day-cell">14</div>
             <div class="day-cell">15</div>
-
-            <!-- Aug 16 Birthday (yellow) -->
             <div class="day-cell birthday" tabindex="0">
               16
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Olha Chernova – Birthday 🎂 ☕
               </div>
             </div>
-
             <div class="day-cell">17</div>
             <div class="day-cell">18</div>
             <div class="day-cell">19</div>
@@ -702,23 +523,18 @@
             <div class="day-cell">21</div>
             <div class="day-cell">22</div>
             <div class="day-cell">23</div>
-
-            <!-- Aug 24 Holiday + Birthday + Anniversary (red, holiday priority) -->
             <div class="day-cell holiday" tabindex="0">
               24
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Independence Day of Ukraine 🇺🇦<br />
               </div>
             </div>
-
-            <!-- Aug 25 Birthday -->
             <div class="day-cell birthday" tabindex="0">
               25
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Roman Moskalov – Birthday 🎂 ☕
               </div>
             </div>
-
             <div class="day-cell">26</div>
             <div class="day-cell">27</div>
             <div class="day-cell">28</div>
@@ -728,7 +544,6 @@
           </div>
         </article>
 
-        <!-- September 2025 -->
         <article class="bg-white rounded-xl shadow border p-6">
           <h3 class="text-2xl font-bold text-[#FF914D] mb-4 text-center">
             September 2025
@@ -741,53 +556,40 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-
-            <!-- Sep 1 is Monday -->
             <div class="day-cell">1</div>
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
-
-            <!-- Sep 4 Birthday -->
             <div class="day-cell birthday" tabindex="0">
               4
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Lisa Travenko – Birthday 🎂 ☕
               </div>
             </div>
-
-            <!-- Sep 5 Anniversary -->
             <div class="day-cell anniversary" tabindex="0">
               5
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Oleksandr Bondarenko – Anniversary 🎊 ☕
               </div>
             </div>
-
             <div class="day-cell">6</div>
-
-            <!-- Sep 7 Anniversary -->
             <div class="day-cell anniversary" tabindex="0">
               7
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Oksana Bulatova – Anniversary 🎉 ☕
               </div>
             </div>
-
             <div class="day-cell">8</div>
             <div class="day-cell">9</div>
             <div class="day-cell">10</div>
             <div class="day-cell">11</div>
             <div class="day-cell">12</div>
             <div class="day-cell">13</div>
-
-            <!-- Sep 14 Birthday -->
             <div class="day-cell birthday" tabindex="0">
               14
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Maryna Khashchivska – Birthday 🎂 ☕
               </div>
             </div>
-
             <div class="day-cell">15</div>
             <div class="day-cell">16</div>
             <div class="day-cell">17</div>
@@ -803,8 +605,6 @@
             <div class="day-cell">27</div>
             <div class="day-cell">28</div>
             <div class="day-cell">29</div>
-
-            <!-- Sep 30 Birthday -->
             <div class="day-cell birthday" tabindex="0">
               30
               <div class="tooltip" role="tooltip" aria-hidden="true">
@@ -814,7 +614,6 @@
           </div>
         </article>
 
-        <!-- October 2025 -->
         <article class="bg-white rounded-xl shadow border p-6">
           <h3 class="text-2xl font-bold text-[#FF914D] mb-4 text-center">
             October 2025
@@ -827,55 +626,41 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-
-            <!-- Oct 1 Wednesday Holiday -->
             <div class="empty"></div>
-
             <div class="empty"></div>
-
             <div class="day-cell holiday" tabindex="0">
               1
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Day of Defenders of Ukraine 🛡️
               </div>
             </div>
-
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
-
-            <!-- Oct 4 Anniversary -->
             <div class="day-cell anniversary" tabindex="0">
               4
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Anzhelika Ionina – Anniversary 🎊 ☕
               </div>
             </div>
-
             <div class="day-cell">5</div>
-
-            <!-- Oct 6 Anniversary -->
             <div class="day-cell anniversary" tabindex="0">
               6
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Anastasia Rusinova – Anniversary 🎉 ☕
               </div>
             </div>
-
             <div class="day-cell">7</div>
             <div class="day-cell">8</div>
             <div class="day-cell">9</div>
             <div class="day-cell">10</div>
             <div class="day-cell">11</div>
             <div class="day-cell">12</div>
-
-            <!-- Oct 13 Birthday -->
             <div class="day-cell birthday" tabindex="0">
               13
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Anzhelika Ionina – Birthday 🎂 ☕
               </div>
             </div>
-
             <div class="day-cell">14</div>
             <div class="day-cell">15</div>
             <div class="day-cell">16</div>
@@ -897,7 +682,6 @@
           </div>
         </article>
 
-        <!-- November 2025 -->
         <article class="bg-white rounded-xl shadow border p-6">
           <h3 class="text-2xl font-bold text-[#FF914D] mb-4 text-center">
             November 2025
@@ -910,33 +694,26 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-
-            <!-- Nov 1 Anniversary -->
             <div class="day-cell anniversary" tabindex="0">
               1
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Olga Chernova – Anniversary 🎊 ☕
               </div>
             </div>
-
             <div class="day-cell anniversary" tabindex="0">
               2
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Karyna Serebrianska – Anniversary 🎉 ☕
               </div>
             </div>
-
             <div class="day-cell">3</div>
             <div class="day-cell">4</div>
-
-            <!-- Nov 5 Anniversary -->
             <div class="day-cell anniversary" tabindex="0">
               5
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Marina Khashchivska – Anniversary 🎊 ☕
               </div>
             </div>
-
             <div class="day-cell">6</div>
             <div class="day-cell">7</div>
             <div class="day-cell">
@@ -970,7 +747,6 @@
           </div>
         </article>
 
-        <!-- December 2025 -->
         <article class="bg-white rounded-xl shadow border p-6">
           <h3 class="text-2xl font-bold text-[#FF914D] mb-4 text-center">
             December 2025
@@ -983,21 +759,17 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-
             <div class="empty"></div>
             <div class="empty"></div>
             <div class="empty"></div>
             <div class="empty"></div>
             <div class="empty"></div>
-
-            <!-- Dec 1 Anniversary -->
             <div class="day-cell anniversary" tabindex="0">
               1
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Inna Bytsenko – Anniversary 🎊 ☕
               </div>
             </div>
-
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
             <div class="day-cell">4</div>
@@ -1021,15 +793,12 @@
             <div class="day-cell">22</div>
             <div class="day-cell">23</div>
             <div class="day-cell">24</div>
-
-            <!-- Dec 25 Christmas Holiday -->
             <div class="day-cell holiday" tabindex="0">
               25
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Christmas 🎄 ☕
               </div>
             </div>
-
             <div class="day-cell">26</div>
             <div class="day-cell">27</div>
             <div class="day-cell">28</div>
@@ -1062,13 +831,25 @@
             </p>
             <p class="font-semibold text-[var(--purple)]">1. Focus 3 Rule</p>
             <p class="mb-2">Start your day by choosing just 3 key tasks.</p>
-            <p class="font-semibold text-[var(--purple)]">2. Time-Blocking > To-Do Lists</p>
-            <p class="mb-2">Structure your day in blocks instead of endless lists.</p>
-            <p class="font-semibold text-[var(--purple)]">3. Templates Are Magic</p>
-            <p class="mb-2">Automate repetitive tasks with message or report templates.</p>
+            <p class="font-semibold text-[var(--purple)]">
+              2. Time-Blocking > To-Do Lists
+            </p>
+            <p class="mb-2">
+              Structure your day in blocks instead of endless lists.
+            </p>
+            <p class="font-semibold text-[var(--purple)]">
+              3. Templates Are Magic
+            </p>
+            <p class="mb-2">
+              Automate repetitive tasks with message or report templates.
+            </p>
             <p class="font-semibold text-[var(--purple)]">4. 20-20-20 Rule</p>
-            <p class="mb-2">Every 20 minutes, look 20 feet away for 20 seconds.</p>
-            <p class="font-semibold text-[var(--purple)]">5. Friday Wrap-Up Ritual</p>
+            <p class="mb-2">
+              Every 20 minutes, look 20 feet away for 20 seconds.
+            </p>
+            <p class="font-semibold text-[var(--purple)]">
+              5. Friday Wrap-Up Ritual
+            </p>
             <p class="mb-2">
               Spend 15 minutes on Friday closing tasks and prepping next week.
             </p>
@@ -1077,12 +858,1311 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[var(--turquoise)] text-white text-center py-6">
-      <p>
-        ☕ Made with love at Central Perk • The Office Friends Newsletter • ©
-        July 2025
-      </p>
+    <section class="bg-[var(--purple)] text-white py-16 px-8">
+      <h2 class="text-4xl font-bold text-center mb-8 text-white">
+        What did Chandler say? 👋
+      </h2>
+      <div class="relative max-w-3xl mx-auto">
+        <svg viewBox="-0.5 -0.5 781 721" xmlns="http://www.w3.org/2000/svg">
+          <g id="cx-0-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="0"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="602.0" y="2.0" role="presentation">
+              1
+            </text>
+            <text dy=".28em" class="cx-a" x="615.0" y="15.0"></text>
+          </g>
+          <g id="cx-0-21">
+            <rect
+              shape-rendering="crispEdge"
+              x="630"
+              y="0"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="645.0" y="15.0"></text>
+          </g>
+          <g id="cx-0-22">
+            <rect
+              shape-rendering="crispEdge"
+              x="660"
+              y="0"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="675.0" y="15.0"></text>
+          </g>
+          <g id="cx-0-23">
+            <rect
+              shape-rendering="crispEdge"
+              x="690"
+              y="0"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="705.0" y="15.0"></text>
+          </g>
+          <g id="cx-1-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="30"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="45.0"></text>
+          </g>
+          <g id="cx-2-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="60"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="75.0"></text>
+          </g>
+          <g id="cx-3-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="90"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="542.0" y="92.0" role="presentation">
+              2
+            </text>
+            <text dy=".28em" class="cx-a" x="555.0" y="105.0"></text>
+          </g>
+          <g id="cx-3-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="90"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="105.0"></text>
+          </g>
+          <g id="cx-4-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="120"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="135.0"></text>
+          </g>
+          <g id="cx-4-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="120"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="135.0"></text>
+          </g>
+          <g id="cx-5-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="150"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="422.0" y="152.0" role="presentation">
+              3
+            </text>
+            <text dy=".28em" class="cx-a" x="435.0" y="165.0"></text>
+          </g>
+          <g id="cx-5-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="150"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="452.0" y="152.0" role="presentation">
+              4
+            </text>
+            <text dy=".28em" class="cx-a" x="465.0" y="165.0"></text>
+          </g>
+          <g id="cx-5-16">
+            <rect
+              shape-rendering="crispEdge"
+              x="480"
+              y="150"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="495.0" y="165.0"></text>
+          </g>
+          <g id="cx-5-17">
+            <rect
+              shape-rendering="crispEdge"
+              x="510"
+              y="150"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="525.0" y="165.0"></text>
+          </g>
+          <g id="cx-5-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="150"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="165.0"></text>
+          </g>
+          <g id="cx-5-19">
+            <rect
+              shape-rendering="crispEdge"
+              x="570"
+              y="150"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="585.0" y="165.0"></text>
+          </g>
+          <g id="cx-5-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="150"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="165.0"></text>
+          </g>
+          <g id="cx-6-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="180"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="392.0" y="182.0" role="presentation">
+              5
+            </text>
+            <text dy=".28em" class="cx-a" x="405.0" y="195.0"></text>
+          </g>
+          <g id="cx-6-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="180"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="195.0"></text>
+          </g>
+          <g id="cx-6-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="180"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="195.0"></text>
+          </g>
+          <g id="cx-6-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="180"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="195.0"></text>
+          </g>
+          <g id="cx-7-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="210"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="405.0" y="225.0"></text>
+          </g>
+          <g id="cx-7-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="210"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="225.0"></text>
+          </g>
+          <g id="cx-7-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="210"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="225.0"></text>
+          </g>
+          <g id="cx-8-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="240"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="302.0" y="242.0" role="presentation">
+              6
+            </text>
+            <text dy=".28em" class="cx-a" x="315.0" y="255.0"></text>
+          </g>
+          <g id="cx-8-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="240"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="392.0" y="242.0" role="presentation">
+              7
+            </text>
+            <text dy=".28em" class="cx-a" x="405.0" y="255.0"></text>
+          </g>
+          <g id="cx-8-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="240"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="255.0"></text>
+          </g>
+          <g id="cx-8-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="240"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="255.0"></text>
+          </g>
+          <g id="cx-8-16">
+            <rect
+              shape-rendering="crispEdge"
+              x="480"
+              y="240"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="495.0" y="255.0"></text>
+          </g>
+          <g id="cx-8-17">
+            <rect
+              shape-rendering="crispEdge"
+              x="510"
+              y="240"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="525.0" y="255.0"></text>
+          </g>
+          <g id="cx-8-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="240"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="255.0"></text>
+          </g>
+          <g id="cx-9-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="270"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="315.0" y="285.0"></text>
+          </g>
+          <g id="cx-9-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="270"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="405.0" y="285.0"></text>
+          </g>
+          <g id="cx-9-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="270"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="285.0"></text>
+          </g>
+          <g id="cx-9-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="270"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="285.0"></text>
+          </g>
+          <g id="cx-10-0">
+            <rect
+              shape-rendering="crispEdge"
+              x="0"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="2.0" y="302.0" role="presentation">
+              8
+            </text>
+            <text dy=".28em" class="cx-a" x="15.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-1">
+            <rect
+              shape-rendering="crispEdge"
+              x="30"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="45.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-2">
+            <rect
+              shape-rendering="crispEdge"
+              x="60"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="75.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-3">
+            <rect
+              shape-rendering="crispEdge"
+              x="90"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="105.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-4">
+            <rect
+              shape-rendering="crispEdge"
+              x="120"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="135.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-5">
+            <rect
+              shape-rendering="crispEdge"
+              x="150"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="165.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-6">
+            <rect
+              shape-rendering="crispEdge"
+              x="180"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="195.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-7">
+            <rect
+              shape-rendering="crispEdge"
+              x="210"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="225.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-8">
+            <rect
+              shape-rendering="crispEdge"
+              x="240"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="255.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-9">
+            <rect
+              shape-rendering="crispEdge"
+              x="270"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="285.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="315.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="405.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="452.0" y="302.0" role="presentation">
+              9
+            </text>
+            <text dy=".28em" class="cx-a" x="465.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-16">
+            <rect
+              shape-rendering="crispEdge"
+              x="480"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="495.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-17">
+            <rect
+              shape-rendering="crispEdge"
+              x="510"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="525.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="542.0" y="302.0" role="presentation">
+              10
+            </text>
+            <text dy=".28em" class="cx-a" x="555.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-19">
+            <rect
+              shape-rendering="crispEdge"
+              x="570"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="585.0" y="315.0"></text>
+          </g>
+          <g id="cx-10-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="300"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="315.0"></text>
+          </g>
+          <g id="cx-11-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="330"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="315.0" y="345.0"></text>
+          </g>
+          <g id="cx-11-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="330"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="405.0" y="345.0"></text>
+          </g>
+          <g id="cx-11-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="330"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="345.0"></text>
+          </g>
+          <g id="cx-11-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="330"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="345.0"></text>
+          </g>
+          <rect
+            shape-rendering="crispEdges"
+            x="570"
+            y="330"
+            width="30"
+            height="30"
+            class="cx-b"
+          ></rect>
+          <g id="cx-11-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="330"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="345.0"></text>
+          </g>
+          <g id="cx-12-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="360"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="315.0" y="375.0"></text>
+          </g>
+          <g id="cx-12-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="360"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="375.0"></text>
+          </g>
+          <g id="cx-12-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="360"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="542.0" y="362.0" role="presentation">
+              11
+            </text>
+            <text dy=".28em" class="cx-a" x="555.0" y="375.0"></text>
+          </g>
+          <g id="cx-12-19">
+            <rect
+              shape-rendering="crispEdge"
+              x="570"
+              y="360"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="585.0" y="375.0"></text>
+          </g>
+          <g id="cx-12-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="360"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="375.0"></text>
+          </g>
+          <g id="cx-12-21">
+            <rect
+              shape-rendering="crispEdge"
+              x="630"
+              y="360"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="645.0" y="375.0"></text>
+          </g>
+          <g id="cx-12-22">
+            <rect
+              shape-rendering="crispEdge"
+              x="660"
+              y="360"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="662.0" y="362.0" role="presentation">
+              12
+            </text>
+            <text dy=".28em" class="cx-a" x="675.0" y="375.0"></text>
+          </g>
+          <g id="cx-13-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="390"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="315.0" y="405.0"></text>
+          </g>
+          <g id="cx-13-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="390"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="405.0"></text>
+          </g>
+          <g id="cx-13-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="390"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="405.0"></text>
+          </g>
+          <g id="cx-13-22">
+            <rect
+              shape-rendering="crispEdge"
+              x="660"
+              y="390"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="675.0" y="405.0"></text>
+          </g>
+          <g id="cx-14-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="302.0" y="422.0" role="presentation">
+              13
+            </text>
+            <text dy=".28em" class="cx-a" x="315.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-11">
+            <rect
+              shape-rendering="crispEdge"
+              x="330"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="345.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-12">
+            <rect
+              shape-rendering="crispEdge"
+              x="360"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="375.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="405.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-16">
+            <rect
+              shape-rendering="crispEdge"
+              x="480"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="495.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="435.0"></text>
+          </g>
+          <g id="cx-14-22">
+            <rect
+              shape-rendering="crispEdge"
+              x="660"
+              y="420"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="675.0" y="435.0"></text>
+          </g>
+          <g id="cx-15-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="450"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="465.0"></text>
+          </g>
+          <g id="cx-15-21">
+            <rect
+              shape-rendering="crispEdge"
+              x="630"
+              y="450"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="632.0" y="452.0" role="presentation">
+              14
+            </text>
+            <text dy=".28em" class="cx-a" x="645.0" y="465.0"></text>
+          </g>
+          <g id="cx-15-22">
+            <rect
+              shape-rendering="crispEdge"
+              x="660"
+              y="450"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="675.0" y="465.0"></text>
+          </g>
+          <g id="cx-15-23">
+            <rect
+              shape-rendering="crispEdge"
+              x="690"
+              y="450"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="705.0" y="465.0"></text>
+          </g>
+          <g id="cx-15-24">
+            <rect
+              shape-rendering="crispEdge"
+              x="720"
+              y="450"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="735.0" y="465.0"></text>
+          </g>
+          <g id="cx-15-25">
+            <rect
+              shape-rendering="crispEdge"
+              x="750"
+              y="450"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="765.0" y="465.0"></text>
+          </g>
+          <g id="cx-16-8">
+            <rect
+              shape-rendering="crispEdge"
+              x="240"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="242.0" y="482.0" role="presentation">
+              15
+            </text>
+            <text dy=".28em" class="cx-a" x="255.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-9">
+            <rect
+              shape-rendering="crispEdge"
+              x="270"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="285.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-10">
+            <rect
+              shape-rendering="crispEdge"
+              x="300"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="315.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-11">
+            <rect
+              shape-rendering="crispEdge"
+              x="330"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="345.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-12">
+            <rect
+              shape-rendering="crispEdge"
+              x="360"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="375.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="405.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-16">
+            <rect
+              shape-rendering="crispEdge"
+              x="480"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="495.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-17">
+            <rect
+              shape-rendering="crispEdge"
+              x="510"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="525.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="495.0"></text>
+          </g>
+          <g id="cx-16-19">
+            <rect
+              shape-rendering="crispEdge"
+              x="570"
+              y="480"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="585.0" y="495.0"></text>
+          </g>
+          <g id="cx-17-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="510"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="525.0"></text>
+          </g>
+          <g id="cx-18-12">
+            <rect
+              shape-rendering="crispEdge"
+              x="360"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="362.0" y="542.0" role="presentation">
+              16
+            </text>
+            <text dy=".28em" class="cx-a" x="375.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-13">
+            <rect
+              shape-rendering="crispEdge"
+              x="390"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="405.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="422.0" y="542.0" role="presentation">
+              17
+            </text>
+            <text dy=".28em" class="cx-a" x="435.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-15">
+            <rect
+              shape-rendering="crispEdge"
+              x="450"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="465.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-16">
+            <rect
+              shape-rendering="crispEdge"
+              x="480"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="495.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-17">
+            <rect
+              shape-rendering="crispEdge"
+              x="510"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="525.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-19">
+            <rect
+              shape-rendering="crispEdge"
+              x="570"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="585.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-20">
+            <rect
+              shape-rendering="crispEdge"
+              x="600"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="615.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-21">
+            <rect
+              shape-rendering="crispEdge"
+              x="630"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="645.0" y="555.0"></text>
+          </g>
+          <g id="cx-18-22">
+            <rect
+              shape-rendering="crispEdge"
+              x="660"
+              y="540"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="675.0" y="555.0"></text>
+          </g>
+          <g id="cx-19-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="570"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="585.0"></text>
+          </g>
+          <g id="cx-19-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="570"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="585.0"></text>
+          </g>
+          <g id="cx-20-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="600"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="615.0"></text>
+          </g>
+          <g id="cx-20-16">
+            <rect
+              shape-rendering="crispEdge"
+              x="480"
+              y="600"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy="1em" class="cx-c" x="482.0" y="602.0" role="presentation">
+              18
+            </text>
+            <text dy=".28em" class="cx-a" x="495.0" y="615.0"></text>
+          </g>
+          <g id="cx-20-17">
+            <rect
+              shape-rendering="crispEdge"
+              x="510"
+              y="600"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="525.0" y="615.0"></text>
+          </g>
+          <g id="cx-20-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="600"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="615.0"></text>
+          </g>
+          <g id="cx-21-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="630"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="645.0"></text>
+          </g>
+          <g id="cx-21-18">
+            <rect
+              shape-rendering="crispEdge"
+              x="540"
+              y="630"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="555.0" y="645.0"></text>
+          </g>
+          <g id="cx-22-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="660"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="675.0"></text>
+          </g>
+          <g id="cx-23-14">
+            <rect
+              shape-rendering="crispEdge"
+              x="420"
+              y="690"
+              width="30"
+              height="30"
+            ></rect>
+            <text dy=".28em" class="cx-a" x="435.0" y="705.0"></text>
+          </g>
+        </svg>
+        <div class="flex flex-col md:flex-row items-start px-4 py-6 ">
+          <div class="flex-1 m-0 pb-10">
+            <h3 class="text-2xl font-bold text-[var(--yellow)] mb-4 text-center">
+              Across
+            </h3>
+            <p>1. the baby boy monica and chandler adopted</p>
+                  
+            <p>3. father of triplets</p>
+        
+            <p>7. has red hair</p>
+        
+            <p>8. What if I dont want to be a shoe</p>
+        
+            <p>9. the baby girl monica and chandler adopted</p>
+        
+            <p>11. mother of triplets</p>
+        
+            <p>13. monicas older boyfriend</p>
+        
+            <p>14. you slept whith another women</p>
+        
+            <p>15. i know!!!!!!</p>
+        
+            <p>16. smelly cat</p>
+        
+            <p>18. rosses baby</p>
+          </div>
+          <div class="flex-1 m-0 pb-10">
+            <h3 class="text-2xl font-bold text-[var(--yellow)] mb-4 text-center">
+              Down
+            </h3>
+            <p>1. how you doin</p>
+                  
+            <p>2. we have rat babys know</p>
+        
+            <p>4. 3 divorces or "WE WERE ON A BREAK"</p>
+        
+            <p>5. evil twin</p>
+        
+            <p>6. works at central perk</p>
+        
+            <p>10. im not good at the advise can i offer you a sarcastic comment</p>
+        
+            <p>12. rachel and rosses baby</p>
+        
+            <p>17. shes british</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[var(--turquoise)] text-white text-center py-16 px-8">
+      <h2 class="text-4xl font-bold text-center mb-8 text-white">Thanks for reading. Could this BE any more fun?</h1>
+       <div class="relative max-w-xl mx-auto mb-10">
+        <img class="rounded-xl w-[200px] mx-auto" src="img/welcome.gif"/>
+      </div>
     </footer>
 
     <div
@@ -1113,166 +2193,5 @@
       </div>
     </div>
 
-    <script>
-      const openBtn = document.getElementById("openVideoBtn");
-      const closeBtn = document.getElementById("closeVideoBtn");
-      const modal = document.getElementById("videoModal");
-      const videoFrame = document.getElementById("videoFrame");
-
-      openBtn.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        videoFrame.src = "img/video.MOV"; // Replace with real summer event video URL
-      });
-
-      closeBtn.addEventListener("click", () => {
-        modal.classList.add("hidden");
-        videoFrame.src = "";
-      });
-    </script>
-
-    <script>
-      // Quiz Data: each answer maps to a Friends character
-      const quizData = [
-        {
-          question: "How you doin’?",
-          answers: [
-            { text: "Smooth and confident", character: "Joey" },
-            { text: "Awkward but charming", character: "Ross" },
-            { text: "Playfully sarcastic", character: "Chandler" },
-            { text: "Cheerfully friendly", character: "Phoebe" },
-          ],
-        },
-        {
-          question:
-            "What’s your “pivot” moment at work – a time when everything had to suddenly change?",
-          answers: [
-            { text: "I lead the change", character: "Monica" },
-            { text: "I adapt quietly", character: "Ross" },
-            { text: "I joke through it", character: "Chandler" },
-            { text: "I help everyone stay calm", character: "Phoebe" },
-          ],
-        },
-        {
-          question:
-            "What’s your go-to comfort snack during a stressful deadline?",
-          answers: [
-            { text: "Pizza", character: "Joey" },
-            { text: "Cookies", character: "Rachel" },
-            { text: "Coffee", character: "Chandler" },
-            { text: "Ice cream", character: "Monica" },
-          ],
-        },
-        {
-          question:
-            "If your job were a Friends episode title, what would it be called?",
-          answers: [
-            { text: "The One with the Crazy Deadline", character: "Monica" },
-            { text: "The One Where We Nailed It", character: "Rachel" },
-            { text: "The One with Too Much Coffee", character: "Chandler" },
-            { text: "The One with the All-Nighter", character: "Ross" },
-          ],
-        },
-        {
-          question: "What's one thing the team doesn't know about you... yet?",
-          answers: [
-            { text: "I play music", character: "Phoebe" },
-            { text: "I love cooking", character: "Monica" },
-            { text: "I’m secretly competitive", character: "Rachel" },
-            { text: "I’ve met a celebrity", character: "Joey" },
-          ],
-        },
-      ];
-
-      // Character descriptions
-      const characterDescriptions = {
-        Joey: "You're Joey Tribbiani! Charming, lovable, and always ready for pizza or a laugh. 'How you doin'?'",
-        Chandler:
-          "You're Chandler Bing! Master of sarcasm with a heart of gold and an endless coffee cup.",
-        Monica:
-          "You're Monica Geller! Organized, competitive, and the one who keeps everyone together.",
-        Rachel:
-          "You're Rachel Green! Stylish, ambitious, and a true friend who’s grown in every season.",
-        Ross: "You're Ross Geller! Passionate, intelligent, and a bit awkward—but that’s part of your charm.",
-        Phoebe:
-          "You're Phoebe Buffay! Quirky, creative, and a free spirit who brings joy to every room.",
-      };
-
-      let currentQuestion = 0;
-      let answersCount = {
-        Joey: 0,
-        Chandler: 0,
-        Monica: 0,
-        Rachel: 0,
-        Ross: 0,
-        Phoebe: 0,
-      };
-
-      const questionText = document.getElementById("questionText");
-      const answersContainer = document.getElementById("answersContainer");
-      const nextBtn = document.getElementById("nextBtn");
-      const quizContainer = document.getElementById("quizContainer");
-      const resultContainer = document.getElementById("resultContainer");
-      const resultTitle = document.getElementById("resultTitle");
-      const resultDescription = document.getElementById("resultDescription");
-
-      function loadQuestion() {
-        const qData = quizData[currentQuestion];
-        questionText.textContent = qData.question;
-        answersContainer.innerHTML = "";
-        nextBtn.disabled = true; // disable until answer selected
-
-        qData.answers.forEach((answer) => {
-          const btn = document.createElement("button");
-          btn.textContent = answer.text;
-          btn.className =
-            "w-full bg-white border border-gray-300 rounded-lg py-2 hover:bg-gray-100 transition";
-          btn.onclick = () => selectAnswer(btn, answer.character);
-          answersContainer.appendChild(btn);
-        });
-      }
-
-      function selectAnswer(selectedBtn, character) {
-        // Remove highlight from all buttons
-        [...answersContainer.children].forEach((btn) =>
-          btn.classList.remove("bg-[var(--yellow)]")
-        );
-        // Highlight selected button
-        selectedBtn.classList.add("bg-[var(--yellow)]");
-        // Store character vote
-        selectedBtn.dataset.character = character;
-        nextBtn.dataset.character = character;
-        nextBtn.disabled = false;
-      }
-
-      nextBtn.addEventListener("click", () => {
-        const selectedCharacter = nextBtn.dataset.character;
-        if (selectedCharacter) {
-          answersCount[selectedCharacter]++;
-        }
-
-        if (currentQuestion < quizData.length - 1) {
-          currentQuestion++;
-          loadQuestion();
-        } else {
-          showResult();
-        }
-      });
-
-      function showResult() {
-        quizContainer.classList.add("hidden");
-        resultContainer.classList.remove("hidden");
-
-        // Find character with max score
-        let topCharacter = Object.keys(answersCount).reduce((a, b) =>
-          answersCount[a] > answersCount[b] ? a : b
-        );
-
-        resultTitle.textContent = `You are ${topCharacter}!`;
-        resultDescription.textContent = characterDescriptions[topCharacter];
-      }
-
-      // Initialize quiz
-      loadQuestion();
-    </script>
   </body>
 </html>
