@@ -43,8 +43,8 @@ body {
 }
 
 .bg-3 {
-  background-image: url("../img/bg-3.jpg");
-  background-color: #ffffffcf;
+  background-image: url(../img/bg-3.jpg);
+  background-color: #ffffff78;
   background-position: center;
   background-blend-mode: color;
 }
