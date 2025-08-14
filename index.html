@@ -17,7 +17,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
@@ -30,15 +30,15 @@
 
       <div class="relative max-w-xl mx-auto mb-10 translate-y-[30px]">    
         <div class="absolute inset-0 z-10">
-          <img src="img/event1.jpg" class="hidden lg:block z-20 absolute top-[0%] left-[-80px] w-36 rotate-[-6deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-1s" alt="">
-          <img src="img/event2.jpg" class="hidden lg:block z-10 absolute top-[28%] left-[-90px] w-36 rotate-[4deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-2s" alt="">
-          <img src="img/event3.jpg" class="hidden lg:block absolute top-[45%] left-[-85px] w-36 rotate-[-3deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-3s" alt="">
-          <img src="img/event4.jpg" class="hidden lg:block absolute bottom-[-10%] left-[-95px] w-36 rotate-[6deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-4s" alt="">
+          <img src="img/event1.jpg" class="hidden lg:block z-20 absolute top-[0%] left-[-80px] w-36 rotate-[-6deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-1s" >
+          <img src="img/event2.jpg" class="hidden lg:block z-10 absolute top-[28%] left-[-90px] w-36 rotate-[4deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-2s" >
+          <img src="img/event3.jpg" class="hidden lg:block absolute top-[45%] left-[-85px] w-36 rotate-[-3deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-3s" >
+          <img src="img/event4.jpg" class="hidden lg:block absolute bottom-[-10%] left-[-95px] w-36 rotate-[6deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-4s" >
         
-          <img src="img/event5.jpg" class="hidden lg:block z-20 absolute top-[0%] right-[-80px] w-36 rotate-[5deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-5s" alt="">
-          <img src="img/event6.jpg" class="hidden lg:block z-10 absolute top-[30%] right-[-90px] w-36 rotate-[-4deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-6" alt="">
-          <img src="img/event7.jpg" class="hidden lg:block absolute top-[55%] right-[-85px] w-36 rotate-[3deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-7" alt="">
-          <img src="img/event8.jpg" class="hidden lg:block absolute bottom-[-10%] right-[-95px] w-36 rotate-[-6deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-8" alt="">
+          <img src="img/event5.jpg" class="hidden lg:block z-20 absolute top-[0%] right-[-80px] w-36 rotate-[5deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-5s" >
+          <img src="img/event6.jpg" class="hidden lg:block z-10 absolute top-[30%] right-[-90px] w-36 rotate-[-4deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-6" >
+          <img src="img/event7.jpg" class="hidden lg:block absolute top-[55%] right-[-85px] w-36 rotate-[3deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-7" >
+          <img src="img/event8.jpg" class="hidden lg:block absolute bottom-[-10%] right-[-95px] w-36 rotate-[-6deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-8" >
         </div>
     
         <img
@@ -66,17 +66,26 @@
         </div>       
       </div>
 
-      <h2 class="text-3xl italic font-medium translate-y-[30px]">“We Were on a Break!” 🏖️</h2>
-      <p class="mt-4 text-sm translate-y-[30px]">
+      <div class="max-w-2xl mx-auto mb-0">
+       <h2 class="text-3xl italic font-medium translate-y-[30px]">“We Were on a Break!” 🏖️</h2>
+      <p class="mt-4 text-sm translate-y-[30px] mb-12">
         Corporate event highlights and couch moments from our summer retreat.
       </p>
+        <img class="block rounded-xl shadow mx-auto" src="img/welcome.gif"/>
+      </div>
     </section>    
 
-    <section class="bg-1 py-16 px-8">
-      <h2 class="text-4xl font-bold text-center mb-8 text-white">
+    <section class="bg-1 py-16 px-8 relative overflow-hidden">
+      <img src="img/cup.gif"  
+           class="hidden lg:block absolute top-10 left-10 w-64 h-auto pointer-events-none z-0">
+    
+      <img src="img/sofa.gif"  
+           class="hidden lg:block absolute bottom-10 right-10 w-64 h-auto pointer-events-none z-0">
+
+      <h2 class="text-4xl font-bold text-center mb-8 text-white wow animate__animated animate__fadeInUp" data-wow-delay="0s">
         Central Perk News ☕
       </h2>
-      <div class="max-w-3xl mx-auto space-y-6">
+      <div class="relative max-w-3xl mx-auto space-y-6 z-10 wow animate__animated animate__fadeInUp" data-wow-delay="0s">
         <div
           class="flex items-start space-x-4 border-l-4 bg-white px-4 py-6 rounded-xl shadow border"
         >
@@ -152,10 +161,10 @@
     </section>
 
     <section class="bg-2 py-16 px-8 text-black">
-      <h2 class="text-4xl text-[#B088C4] font-bold text-center mb-8 bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6">
+      <h2 class="text-4xl text-[#B088C4] font-bold text-center mb-8 bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
         The One with the Newbies 👋
       </h2>
-      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
         <div class="bg-white rounded-xl shadow border overflow-hidden">
           <img src="img/Asya.jpg" class="w-full object-cover h-[700px] mb-4" />
           <h3 class="text-3xl font-bold mb-2 text-[var(--purple)] px-6">
@@ -339,13 +348,13 @@
     </section>
 
     <section class="bg-white py-16 px-8">
-      <h2 class="text-4xl font-bold text-center mb-12 text-[var(--orange)]">
+      <h2 class="text-4xl font-bold text-center mb-12 text-[var(--orange)] wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
         The One with the Questionnaire 📝
       </h2>
-      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
         This year Ann marked her 10-year work anniversary!  Are there any insights to share?
       </p>
-      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
         <div class="flex justify-center md:justify-start">
           <img
             src="img/Anna.jpg"
@@ -404,28 +413,28 @@
     </section>
 
     <section class="bg-3 py-16 px-6 text-center" id="friendsQuiz">
-      <h2 class="text-4xl font-bold text-[var(--purple)] mb-8 bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6 mb-12">
+      <h2 class="text-4xl font-bold text-[var(--purple)] mb-8 bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6 mb-12 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" id="friendsQuiz">
         Which Friends character are you? 🎤
       </h2>
 
       <div
         id="quizContainer"
-        class="max-w-2xl mx-auto bg-white rounded-xl shadow border p-6"
+        class="max-w-2xl mx-auto bg-white rounded-xl shadow border p-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" id="friendsQuiz"
       >
-        <p id="questionText" class="italic text-[var(--orange)] text-2xl font-semibold mb-6"></p>
+        <p id="questionText" class="italic text-[var(--orange)] text-2xl font-bold mb-6"></p>
 
         <div id="answersContainer" class="space-y-4"></div>
 
         <button
           id="nextBtn"
           disabled
-          class="mt-6 w-[240px] bg-[var(--purple)] text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-500 transition"
+          class="mt-6 w-[240px] bg-[var(--orange)] text-white px-6 py-2 rounded-lg font-bold hover:bg-orange-500 transition"
         >
           Next
         </button>
       </div>
 
-      <div id="resultContainer" class="hidden mt-8">
+      <div id="resultContainer" class="hidden w-fit mx-auto mt-8 bg-white rounded-xl shadow border p-6">
         <h3
           id="resultTitle"
           class="text-3xl font-bold text-[var(--turquoise)] mb-4"
@@ -435,15 +444,15 @@
     </section>
 
     <section class="bg-white py-16 px-6">
-      <h2 class="text-4xl font-bold text-[var(--orange)] mb-8 text-center">
+      <h2 class="text-4xl font-bold text-[var(--orange)] mb-8 text-center wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
         The One with the Conference 🎓
       </h2>
-      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
         This year, our team has truly gone global, one conference badge at a
         time.
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
@@ -578,13 +587,13 @@
         </div>
       </div>
 
-      <div class="text-center mt-12 max-w-2xl mx-auto mb-5">
+      <div class="text-center mt-12 max-w-2xl mx-auto mb-5 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
         <p class="text-lg">
           Stay tuned — the next destination might be your name in bold. 🌍
         </p>
       </div>
 
-      <div class="max-w-3xl mx-auto space-y-6">
+      <div class="max-w-3xl mx-auto space-y-6 wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
         <div
           class="flex items-start space-x-4 border-l-4 bg-[var(--beige)] px-4 py-6 rounded-xl shadow border"
         >
@@ -602,7 +611,7 @@
     </section>
 
     <section class="bg-4 py-16 px-6 overflow-hidden">
-      <div class="bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6 mb-12">
+      <div class="bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6 mb-12 wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
       <h2 class="text-4xl font-bold text-[#B088C4] mb-6 text-center">
         The One with Birthdays&Holidays 🎂
       </h2>
@@ -612,7 +621,10 @@
         Could we BE any more festive? 🎉
       </p>
     </div>
-      <div class="container-grid">
+    <div class="mt-12 max-w-2xl mx-auto mb-12 wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+      <img class="rounded-xl shadow border mx-auto" src="img/happy-birthday-friends.gif">
+    </div>
+      <div class="container-grid wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
         <article class="bg-white rounded-xl shadow border p-6">
           <h3 class="text-2xl font-bold text-[#FF914D] mb-4 text-center">
             August 2025
@@ -921,14 +933,15 @@
           </div>
         </article>
       </div>
+
     </section>
 
     <section class="bg-white py-16 px-8">
-      <h2 class="text-4xl font-bold text-center mb-12 text-[var(--purple)]">
+      <h2 class="text-4xl font-bold text-center mb-12 text-[var(--purple)] wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
         The One with the Workiversaries 🎉
       </h2>
-      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Let’s give a big round of applause to our teammates reaching new anniversaries:</p>
-      <div class="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">Let’s give a big round of applause to our teammates reaching new anniversaries:</p>
+      <div class="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
         <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
           <h3 class="text-2xl font-semibold text-[var(--orange)]">Viktoria Kleban</h3>
           <p class="text-gray-600 mb-2">August</p>
@@ -1017,18 +1030,22 @@
           </span>
         </div>
       </div>
-      <div class="text-center mt-12 max-w-2xl mx-auto mb-5">
+      <div class="text-center mt-12 max-w-2xl mx-auto mb-5 wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
         <p class="text-lg">
           Thank you for your dedication, ideas, and everything you bring to the team.<br/>We’re lucky to have you!
         </p>
       </div>
     </section>   
 
-    <section class="bg-5 py-16 px-8">
-      <h2 class="text-4xl font-bold text-center mb-8 text-white">
+    <section class="bg-5 py-16 px-8 relative">
+     <img src="img/rachel.gif"  
+      class="hidden lg:block absolute bottom-0 right-10 w-64 h-auto pointer-events-none z-0">
+
+
+      <h2 class="text-4xl font-bold text-center mb-8 text-white  wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
         Monica’s Tips & Tricks ☕
       </h2>
-      <div class="max-w-3xl mx-auto space-y-6">
+      <div class="max-w-3xl mx-auto space-y-6 z-10  wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
         <div
           class="flex items-start space-x-4 border-l-4 bg-white px-4 py-6 rounded-xl shadow border"
         >
@@ -1072,11 +1089,12 @@
       </div>
     </section>
 
-    <section class="bg-[var(--purple)] text-white py-16 px-8">
-      <h2 class="text-4xl font-bold text-center mb-8 text-white">
+    <section class="bg-[var(--purple)] text-white py-16 px-8 relative">
+      <img src="img/door.webp"  class="hidden lg:block absolute top-20 left-20 w-72 h-auto pointer-events-none z-0">
+      <h2 class="text-4xl font-bold text-center mb-8 text-white wow animate__animated animate__fadeInUp" data-wow-delay="2.3s">
         What did Chandler say? 👋
       </h2>
-      <div class="relative max-w-3xl mx-auto">
+      <div class="relative max-w-3xl mx-auto wow animate__animated animate__fadeInUp" data-wow-delay="2.3s">
         <svg viewBox="-0.5 -0.5 781 721" xmlns="http://www.w3.org/2000/svg">
           <g id="cx-0-20">
             <rect
@@ -2373,10 +2391,7 @@
     </section>
 
     <footer class="bg-6 text-white text-center py-16 px-8 h-[560px]">
-      <h2 class="text-4xl font-bold text-center mb-8 text-white">Thanks for reading. Could this BE any more fun?</h1>
-       <div class="relative max-w-xl mx-auto mb-10 hidden">
-        <img class="rounded-xl w-[200px] mx-auto" src="img/welcome.gif"/>
-      </div>
+      <h2 class="text-4xl font-bold text-center mb-8 text-white wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">Thanks for reading. Could this BE any more fun?</h1>
     </footer>
 
   </body>
