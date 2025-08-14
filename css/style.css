@@ -191,6 +191,10 @@ g rect {
 
 li::marker {content: none;}
 
+.photo-delay-6 { animation-delay: 6s !important; }
+.photo-delay-7 { animation-delay: 7s !important; }
+.photo-delay-8 { animation-delay: 8s !important; }
+
 @media (max-width: 1200px) {
   .last-row {
     grid-column: span 3;

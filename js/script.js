@@ -1,38 +1,10 @@
-/*const openBtn = document.getElementById("openVideoBtn");
-const closeBtn = document.getElementById("closeVideoBtn");
-const modal = document.getElementById("videoModal");
-const videoFrame = document.getElementById("videoFrame");
+const video = document.getElementById('myVideo');
+const playBtn = document.getElementById('playButton');
 
-openBtn.addEventListener("click", () => {
-    modal.classList.remove("hidden");
-    videoFrame.src = "img/video.MOV"; // Replace with real summer event video URL
-});
-
-closeBtn.addEventListener("click", () => {
-    modal.classList.add("hidden");
-    videoFrame.src = "";
-});*/
-
-document.addEventListener("DOMContentLoaded", () => {
-    const audio = document.getElementById("myAudio");
-
-    // Try to autoplay muted
-    audio.muted = true;
-    audio.play().then(() => {
-        console.log("Muted autoplay started");
-    }).catch(err => {
-        console.log("Autoplay was blocked:", err);
-    });
-
-    // Unmute and play after first interaction
-    const unmute = () => {
-        audio.muted = false;
-        audio.volume = 0.1;
-        audio.play();
-        document.removeEventListener("click", unmute);
-    };
-
-    document.addEventListener("click", unmute);
+playBtn.addEventListener('click', () => {
+  video.muted = false; // Enable sound
+  video.play();
+  playBtn.style.display = 'none'; // Hide button after playing
 });
 
 // Quiz Data: each answer maps to a Friends character

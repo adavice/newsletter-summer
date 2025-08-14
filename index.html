@@ -15,6 +15,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
@@ -24,59 +26,49 @@
 
       <h1 class="text-5xl font-extrabold mb-2 translate-y-[30px]">The Office F.R.I.E.N.D.S</h1>
       <p class="text-xl uppercase tracking-widest mb-8 translate-y-[30px]">August 2025</p>
-      <img src="img/event1.jpg" class="hidden lg:block absolute top-[0%] left-[0px] w-48 rotate-[-6deg] shadow-lg rounded-md" alt="">
-      <img src="img/event2.jpg" class="hidden lg:block absolute top-[25%] left-[0px] w-48 rotate-[4deg] shadow-lg rounded-md" alt="">
-      <img src="img/event3.jpg" class="hidden lg:block absolute top-[45%] left-[0px] w-48 rotate-[-3deg] shadow-lg rounded-md" alt="">
-      <img src="img/event4.jpg" class="hidden lg:block absolute bottom-[0%] left-[0px] w-48 rotate-[6deg] shadow-lg rounded-md" alt="">
-      
-      <img src="img/event5.jpg" class="hidden lg:block absolute top-[0%] right-[0px] w-48 rotate-[5deg] shadow-lg rounded-md" alt="">
-          <img src="img/event6.jpg" class="hidden lg:block absolute top-[25%] right-[0px] w-48 rotate-[-4deg] shadow-lg rounded-md" alt="">
-          <img src="img/event7.jpg" class="hidden lg:block absolute top-[45%] right-[0px] w-48 rotate-[3deg] shadow-lg rounded-md" alt="">
-          <img src="img/event8.jpg" class="hidden lg:block absolute bottom-[0%] right-[0px] w-56 rotate-[-6deg] shadow-lg rounded-md" alt="">
+
+      <div class="relative max-w-xl mx-auto mb-10 translate-y-[30px]">    
+        <div class="absolute inset-0 z-10">
+          <img src="img/event1.jpg" class="z-20 absolute top-[0%] left-[-80px] w-36 rotate-[-6deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-1s" alt="">
+          <img src="img/event2.jpg" class="z-10 absolute top-[28%] left-[-90px] w-36 rotate-[4deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-2s" alt="">
+          <img src="img/event3.jpg" class="absolute top-[45%] left-[-85px] w-36 rotate-[-3deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-3s" alt="">
+          <img src="img/event4.jpg" class="absolute bottom-[-10%] left-[-95px] w-36 rotate-[6deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-4s" alt="">
         
-    
-      <div class="relative max-w-xl mx-auto mb-10 translate-y-[30px]">
-    
-        <!-- Side photos -->
-        <div class="absolute inset-0 z-10 sm:block md:block lg:hidden">
-          <!-- Left column -->
-          <img src="img/event1.jpg" class="absolute top-[5%] left-[-80px] w-32 rotate-[-6deg] shadow-lg rounded-md" alt="">
-          <img src="img/event2.jpg" class="absolute top-[30%] left-[-90px] w-32 rotate-[4deg] shadow-lg rounded-md" alt="">
-          <img src="img/event3.jpg" class="absolute top-[55%] left-[-85px] w-32 rotate-[-3deg] shadow-lg rounded-md" alt="">
-          <img src="img/event4.jpg" class="absolute bottom-0 left-[-95px] w-32 rotate-[6deg] shadow-lg rounded-md" alt="">
-          
-          <!-- Right column -->
-          <img src="img/event5.jpg" class="absolute top-[5%] right-[-80px] w-32 rotate-[5deg] shadow-lg rounded-md" alt="">
-          <img src="img/event6.jpg" class="absolute top-[30%] right-[-90px] w-32 rotate-[-4deg] shadow-lg rounded-md" alt="">
-          <img src="img/event7.jpg" class="absolute top-[55%] right-[-85px] w-32 rotate-[3deg] shadow-lg rounded-md" alt="">
-          <img src="img/event8.jpg" class="absolute bottom-0 right-[-95px] w-32 rotate-[-6deg] shadow-lg rounded-md" alt="">
+          <img src="img/event5.jpg" class="z-20 absolute top-[0%] right-[-80px] w-36 rotate-[5deg] shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-5s" alt="">
+          <img src="img/event6.jpg" class="z-10 absolute top-[30%] right-[-90px] w-36 rotate-[-4deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-6" alt="">
+          <img src="img/event7.jpg" class="absolute top-[55%] right-[-85px] w-36 rotate-[3deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-7" alt="">
+          <img src="img/event8.jpg" class="absolute bottom-[-10%] right-[-95px] w-36 rotate-[-6deg] shadow-lg rounded-md animate__animated animate__fadeIn photo-delay-8" alt="">
         </div>
     
-        <!-- Door frame + video -->
         <img
           src="img/frame.png"
           alt="Central Perk Door Illustration"
           class="rounded-xl w-full relative z-10"
         />
         <div class="absolute overflow-hidden inset-0 flex items-center justify-center">
-          <div class="color-block relative w-[100%] bg-[#fcc147]">
+          <div class="relative w-[100%]">
             <img src="img/logo.png" alt="Logo" class="absolute top-[40%] left-[15%] w-[70%] h-auto object-contain drop-shadow-lg pointer-events-none z-10">
-            <div class="h-[100%]">
-              <video class="w-full" autoplay muted>
-                <source src="img/video.MOV" type="video/mp4">
+            
+            <div class="h-[100%] relative">
+              <video id="myVideo" class="w-full" muted>
+                <source src="img/video.mp4" type="video/mp4">
               </video>
+        
+              <button 
+                id="playButton"
+                class="z-50 absolute inset-0 flex items-center justify-center text-white text-2xl font-bold hover:bg-opacity-70 transition top-[150px]"
+              >
+              <i class="fas fa-play bg-black px-4 py-3 rounded-3xl"></i>
+              </button>
             </div>
           </div>
-        </div>
+        </div>       
       </div>
-    
+
       <h2 class="text-3xl italic font-medium translate-y-[30px]">“We Were on a Break!” 🏖️</h2>
       <p class="mt-4 text-sm translate-y-[30px]">
         Corporate event highlights and couch moments from our summer retreat.
       </p>
-      <audio id="myAudio" class="mt-5 mx-auto translate-y-[30px]" controls>
-        <source src="img/song.mp3" type="audio/mpeg">
-      </audio>
     </section>    
 
     <section class="bg-1 py-16 px-8">
@@ -365,10 +357,6 @@
           class="bg-[var(--beige,#fdfdfd)] rounded-xl shadow-lg p-8 space-y-6"
         >
           <div>
-            <p class="font-semibold text-[var(--purple)] italic text-2xl">Full Name</p>
-            <p>Anna Zolotarova</p>
-          </div>
-          <div>
             <p class="font-semibold text-[var(--purple)] italic text-2xl">How you doin’?</p>
             <p>
               All good here! Just channeling my inner Chandler with a little
@@ -529,7 +517,7 @@
             <p class="mb-4">
               In June, Alyona and Anzhelika landed on the sunny island of Malta.
             </p>
-            <p class="italic text-gray-700">
+            <p class="italic text-gray-700 text-2xl">
               "Hi, sunny Malta welcomed us this June ☀️<br />The embankment
               atmosphere gave memories of our peaceful life<br />
               The SBC Summit was cozy and exciting. We’re still in touch with
@@ -568,7 +556,7 @@
               all!
             </p>
 
-            <p class="italic text-gray-700">
+            <p class="italic text-gray-700 text-2xl">
               "Attending affiliate conferences abroad is an incredible
               experience, both professionally and personally. These events
               gather top experts, companies, and marketers from around the
@@ -720,9 +708,6 @@
             <div class="day-cell">6</div>
             <div class="day-cell">
               7
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Oksana Bulatova – Anniversary 🎉 ☕
-              </div>
             </div>
             <div class="day-cell">8</div>
             <div class="day-cell">9</div>
@@ -788,9 +773,6 @@
             <div class="day-cell">5</div>
             <div class="day-cell">
               6
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Anastasia Rusinova – Anniversary 🎉 ☕
-              </div>
             </div>
             <div class="day-cell">7</div>
             <div class="day-cell">8</div>
@@ -837,25 +819,19 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-            <div class="day-cell">
-              1
-            </div>
-            <div class="day-cell">
-              2
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Karyna Serebrianska – Anniversary 🎉 ☕
-              </div>
-            </div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="day-cell">1</div>
+            <div class="day-cell">2</div>
             <div class="day-cell">3</div>
             <div class="day-cell">4</div>
-            <div class="day-cell">
-              5
-            </div>
+            <div class="day-cell">5</div>
             <div class="day-cell">6</div>
             <div class="day-cell">7</div>
-            <div class="day-cell">
-              8
-            </div>
+            <div class="day-cell">8</div>
             <div class="day-cell">9</div>
             <div class="day-cell">10</div>
             <div class="day-cell">11</div>
@@ -893,18 +869,18 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
-            <div class="empty"></div>
             <div class="day-cell">
               1
             </div>
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
             <div class="day-cell">4</div>
-            <div class="day-cell">5</div>
+            <div class="day-cell birthday" tabindex="0">
+              5
+              <div class="tooltip" role="tooltip" aria-hidden="true">
+                Asya Samokhatnia – Birthday 🎂 ☕
+              </div>
+            </div>
             <div class="day-cell">6</div>
             <div class="day-cell">7</div>
             <div class="day-cell">8</div>
@@ -935,7 +911,12 @@
             <div class="day-cell">28</div>
             <div class="day-cell">29</div>
             <div class="day-cell">30</div>
-            <div class="day-cell">31</div>
+            <div class="day-cell holiday" tabindex="0">
+              31
+              <div class="tooltip" role="tooltip" aria-hidden="true">
+                New Year Day 🎄 ☕
+              </div>
+            </div>
           </div>
         </article>
       </div>
@@ -980,7 +961,7 @@
         </div>
 
         <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
-          <h3 class="text-2xl font-semibold text-[var(--orange)]">Karyna Serebrianska</h3>
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Anastasiia Rusinova</h3>
           <p class="text-gray-600 mb-2">October</p>
           <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
             2 years
@@ -2396,34 +2377,6 @@
         <img class="rounded-xl w-[200px] mx-auto" src="img/welcome.gif"/>
       </div>
     </footer>
-
-    <div
-      id="videoModal"
-      class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50"
-    >
-      <div
-        id="videoDiv"
-        class="bg-white rounded-xl overflow-hidden shadow-lg w-fit relative"
-      >
-        <button
-          id="closeVideoBtn"
-          class="z-10 absolute top-2 right-2 text-gray-600 hover:text-black text-2xl"
-        >
-          ✖
-        </button>
-        <img
-          src="img/logo.png"
-          alt="Logo"
-          class="absolute top-[40%] right-[2%] w-[95%] h-auto object-contain drop-shadow-lg pointer-events-none"
-        />
-
-        <div class="aspect-w-16 aspect-h-9">
-          <video id="videoFrame" class="w-full h-[500px]" controls autoplay>
-            <source src="img/video.MOV" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-    </div>
 
   </body>
 </html>
