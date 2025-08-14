@@ -12,7 +12,12 @@
 h1,
 h2,
 h3,
-h4 {
+h4, li {
+  font-family: "Caveat", cursive;
+  font-style: italic;
+}
+
+.italic {
   font-family: "Caveat", cursive;
   font-style: italic;
 }
@@ -30,12 +35,40 @@ body {
   background-size: cover;
 }
 
-.bg-2 {
-  background-image: url("../img/bg-2.jpg");
+.bg-2{
+  background-image: url(../img/bg-2.jpg);
+  background-color: #ffffffb8;
+  background-position: center;
+  background-blend-mode: color;
+}
+
+.bg-3 {
+  background-image: url("../img/bg-3.jpg");
+  background-color: #ffffffcf;
+  background-position: center;
+  background-blend-mode: color;
+}
+
+.bg-4 {
+  background-image: url(../img/bg-4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #fdf6eede;
+  background-blend-mode: color;
+}
+
+.bg-5 {
+  background-image: url("../img/bg-5.jpg");
   background-color: #00000080;
   background-position: center;
   background-blend-mode: color;
   background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-6 {
+  background-image: url(../img/bg-6.jpg);
+  background-position: bottom;
   background-size: cover;
 }
 
@@ -156,6 +189,8 @@ g rect {
   fill: #fff;
 }
 
+li::marker {content: none;}
+
 @media (max-width: 1200px) {
   .last-row {
     grid-column: span 3;
@@ -176,12 +211,50 @@ g rect {
 
   .container-grid article {
     width: 100%;
-    overflow: hidden;
   }
 
   .day-cell {
     width: 2.2rem;
     height: 2.2rem;
     line-height: 2.2rem;
+  }
+}
+
+.color-block{
+  border-radius: 150px;
+}
+
+video {
+  height: 300px !important;
+  border-radius: 100px;
+}
+
+@media (min-width: 375px) {
+  video {
+    height: 335px !important;
+  }
+}
+
+@media (min-width: 425px) {
+  video {
+    height: 380px !important;
+  }
+  .color-block {
+    border-radius: 190px;
+  }
+}
+
+@media (min-width: 570px) {
+  video {
+    height: 530px !important;
+  }
+  .color-block {
+    border-radius: 300px;
+  }
+}
+
+@media (min-width: 640px) {
+  video {
+    height: 590px !important;
   }
 }

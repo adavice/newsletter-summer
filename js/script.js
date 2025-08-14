@@ -1,4 +1,4 @@
-const openBtn = document.getElementById("openVideoBtn");
+/*const openBtn = document.getElementById("openVideoBtn");
 const closeBtn = document.getElementById("closeVideoBtn");
 const modal = document.getElementById("videoModal");
 const videoFrame = document.getElementById("videoFrame");
@@ -11,6 +11,28 @@ openBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     modal.classList.add("hidden");
     videoFrame.src = "";
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("myAudio");
+
+    // Try to autoplay muted
+    audio.muted = true;
+    audio.play().then(() => {
+        console.log("Muted autoplay started");
+    }).catch(err => {
+        console.log("Autoplay was blocked:", err);
+    });
+
+    // Unmute and play after first interaction
+    const unmute = () => {
+        audio.muted = false;
+        audio.volume = 0.1;
+        audio.play();
+        document.removeEventListener("click", unmute);
+    };
+
+    document.addEventListener("click", unmute);
 });
 
 // Quiz Data: each answer maps to a Friends character
@@ -156,3 +178,41 @@ function showResult() {
 
 // Initialize quiz
 loadQuestion();
+
+document.addEventListener("DOMContentLoaded", () => {
+    new Swiper(".carousel-barcelona", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        }
+    });
+
+    new Swiper(".carousel-seville", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        }
+    });
+
+    new Swiper(".carousel-malta", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        }
+    });
+
+    new Swiper(".carousel-london", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        }
+    });
+});

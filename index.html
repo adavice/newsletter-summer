@@ -3,42 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Office Friends - July 2025</title>
+    <title>The Office Friends - August 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;family=Roboto+Condensed:wght@300;400;700&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
 
   <body class="bg-[var(--beige)] text-gray-800">
-    <section class="bg-[var(--purple)] text-white py-20 px-6 text-center">
-      <h1 class="text-5xl font-extrabold mb-2">The Office F.R.I.E.N.D.S</h1>
-      <p class="text-xl uppercase tracking-widest mb-8">July 2025</p>
+    <section class="bg-[var(--purple)] text-white py-20 px-6 text-center relative overflow-hidden">
 
-      <div class="relative max-w-xl mx-auto mb-10">
+      <h1 class="text-5xl font-extrabold mb-2 translate-y-[30px]">The Office F.R.I.E.N.D.S</h1>
+      <p class="text-xl uppercase tracking-widest mb-8 translate-y-[30px]">August 2025</p>
+      <img src="img/event1.jpg" class="hidden lg:block absolute top-[0%] left-[0px] w-48 rotate-[-6deg] shadow-lg rounded-md" alt="">
+      <img src="img/event2.jpg" class="hidden lg:block absolute top-[25%] left-[0px] w-48 rotate-[4deg] shadow-lg rounded-md" alt="">
+      <img src="img/event3.jpg" class="hidden lg:block absolute top-[45%] left-[0px] w-48 rotate-[-3deg] shadow-lg rounded-md" alt="">
+      <img src="img/event4.jpg" class="hidden lg:block absolute bottom-[0%] left-[0px] w-48 rotate-[6deg] shadow-lg rounded-md" alt="">
+      
+      <img src="img/event5.jpg" class="hidden lg:block absolute top-[0%] right-[0px] w-48 rotate-[5deg] shadow-lg rounded-md" alt="">
+          <img src="img/event6.jpg" class="hidden lg:block absolute top-[25%] right-[0px] w-48 rotate-[-4deg] shadow-lg rounded-md" alt="">
+          <img src="img/event7.jpg" class="hidden lg:block absolute top-[45%] right-[0px] w-48 rotate-[3deg] shadow-lg rounded-md" alt="">
+          <img src="img/event8.jpg" class="hidden lg:block absolute bottom-[0%] right-[0px] w-56 rotate-[-6deg] shadow-lg rounded-md" alt="">
+        
+    
+      <div class="relative max-w-xl mx-auto mb-10 translate-y-[30px]">
+    
+        <!-- Side photos -->
+        <div class="absolute inset-0 z-10 sm:block md:block lg:hidden">
+          <!-- Left column -->
+          <img src="img/event1.jpg" class="absolute top-[5%] left-[-80px] w-32 rotate-[-6deg] shadow-lg rounded-md" alt="">
+          <img src="img/event2.jpg" class="absolute top-[30%] left-[-90px] w-32 rotate-[4deg] shadow-lg rounded-md" alt="">
+          <img src="img/event3.jpg" class="absolute top-[55%] left-[-85px] w-32 rotate-[-3deg] shadow-lg rounded-md" alt="">
+          <img src="img/event4.jpg" class="absolute bottom-0 left-[-95px] w-32 rotate-[6deg] shadow-lg rounded-md" alt="">
+          
+          <!-- Right column -->
+          <img src="img/event5.jpg" class="absolute top-[5%] right-[-80px] w-32 rotate-[5deg] shadow-lg rounded-md" alt="">
+          <img src="img/event6.jpg" class="absolute top-[30%] right-[-90px] w-32 rotate-[-4deg] shadow-lg rounded-md" alt="">
+          <img src="img/event7.jpg" class="absolute top-[55%] right-[-85px] w-32 rotate-[3deg] shadow-lg rounded-md" alt="">
+          <img src="img/event8.jpg" class="absolute bottom-0 right-[-95px] w-32 rotate-[-6deg] shadow-lg rounded-md" alt="">
+        </div>
+    
+        <!-- Door frame + video -->
         <img
           src="img/frame.png"
           alt="Central Perk Door Illustration"
-          class="rounded-xl w-full"
+          class="rounded-xl w-full relative z-10"
         />
-        <div class="absolute inset-0 flex items-center justify-center">
-          <button
-            id="openVideoBtn"
-            class="bg-[var(--yellow)] text-black px-3 py-2 font-bold rounded shadow hover:bg-yellow-400 transition"
-          >
-            ▶️ Watch Summer Video
-          </button>
+        <div class="absolute overflow-hidden inset-0 flex items-center justify-center">
+          <div class="color-block relative w-[100%] bg-[#fcc147]">
+            <img src="img/logo.png" alt="Logo" class="absolute top-[40%] left-[15%] w-[70%] h-auto object-contain drop-shadow-lg pointer-events-none z-10">
+            <div class="h-[100%]">
+              <video class="w-full" autoplay muted>
+                <source src="img/video.MOV" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
       </div>
-
-      <h2 class="text-3xl italic font-medium">“We Were on a Break!” 🏖️</h2>
-      <p class="mt-4 text-sm">
+    
+      <h2 class="text-3xl italic font-medium translate-y-[30px]">“We Were on a Break!” 🏖️</h2>
+      <p class="mt-4 text-sm translate-y-[30px]">
         Corporate event highlights and couch moments from our summer retreat.
       </p>
-    </section>
+      <audio id="myAudio" class="mt-5 mx-auto translate-y-[30px]" controls>
+        <source src="img/song.mp3" type="audio/mpeg">
+      </audio>
+    </section>    
 
     <section class="bg-1 py-16 px-8">
       <h2 class="text-4xl font-bold text-center mb-8 text-white">
@@ -58,6 +97,22 @@
             <p>Guess who landed the big client pitch? 🎯</p>
           </div>
         </div>
+
+        <div
+        class="flex items-start space-x-4 border-l-4 bg-white px-4 py-6 rounded-xl shadow border"
+      >
+        <img
+          src="img/favicon.png"
+          alt="Adavice"
+          class="w-12 h-12 rounded-full object-cover mt-1"
+        />
+        <div>
+          <p class="font-semibold text-[var(--turquoise)]">Adavice</p>
+          <p>Inna, Liza and Olha have officially passed their probation period!🎉<br/>
+            Could they BE any more awesome?
+          </p>
+        </div>
+      </div>
 
         <div
           class="flex items-start space-x-4 border-l-4 bg-white px-4 py-6 rounded-xl shadow border"
@@ -103,102 +158,143 @@
       </div>
     </section>
 
-    <section class="bg-[var(--yellow)] py-16 px-8 text-black">
-      <h2 class="text-4xl font-bold text-center mb-8">
+    <section class="bg-2 py-16 px-8 text-black">
+      <h2 class="text-4xl text-[#B088C4] font-bold text-center mb-8 bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6">
         The One with the Newbies 👋
       </h2>
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
         <div class="bg-white rounded-xl shadow border overflow-hidden">
-          <img src="img/Anna.jpg" class="w-full object-cover h-[500px] mb-4" />
+          <img src="img/Inna.JPG" class="w-full object-cover h-[700px] mb-4" />
           <h3 class="text-3xl font-bold mb-2 text-[var(--purple)] px-6">
             Inna Bytsenko
           </h3>
-          <p class="italic text-sm mb-4 px-6">Junior Campaign Manager</p>
+          <p class="italic text-sm mb-4 px-6 text-xl">Junior Campaign Manager</p>
           <ul class="list-disc list-inside text-gray-700 px-6 pb-6">
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                1
+              </span>
               I’m a huge fan of Maroon 5 and Imagine Dragons. One dream has
               already come true — I went to a Maroon 5 concert! Next goal:
               Imagine Dragons live. 🎤
             </li>
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--purple)] text-white rounded-full font-bold">
+                2
+              </span>
               No coffee = no me. ☕ It’s my daily ritual and my tiny addiction.
             </li>
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--yellow)] text-white rounded-full font-bold">
+                3
+              </span>
               I absolutely love the TV show Friends — I’ve seen it so many times
               I could probably quote it in my sleep!
             </li>
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                4
+              </span>
               One of my craziest food experiments? Fried larva and grasshopper.
               Yes, really.
             </li>
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--purple)] text-white rounded-full font-bold">
+                5
+              </span>
               I collect souvenir plates from every city and country I visit.
             </li>
           </ul>
         </div>
 
         <div class="bg-white rounded-xl shadow border overflow-hidden">
-          <img src="img/Anna.jpg" class="w-full object-cover h-[500px] mb-4" />
+          <img src="img/Liza.jpg" class="w-full object-cover h-[700px] mb-4" />
           <h3 class="text-3xl font-bold mb-2 text-[var(--purple)] px-6">
             Liza Travenko
           </h3>
-          <p class="italic text-sm mb-4 px-6">Junior Campaign Manager</p>
+          <p class="italic text-sm mb-4 px-6 text-xl">Junior Campaign Manager</p>
           <ul class="list-disc list-inside text-gray-700 px-6 pb-6">
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                1
+              </span>
               I’ve loved basketball since school, and even though I don’t get to
               play as much now (blame the moving), I always find a way to stay
               active. 🏀💃
             </li>
 
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--purple)] text-white rounded-full font-bold">
+                2
+              </span>
               I’m that friend who says “yes” to early morning bike rides,
               sunrises by the lake, or random nature trips. Just text me “let’s
               go” — and I’m in. 🚴‍♀️🌅
             </li>
 
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--yellow)] text-white rounded-full font-bold">
+                3
+              </span>
               Forget lobster — my ultimate comfort food is smoked mackerel +
               potatoes. A combo so good, even Joey wouldn’t share it. 🐟🥔❤️
             </li>
 
-            <li>
-              Once I gave my friend a ride on my bike… we crashed… and her face
-              met the asphalt. So yeah, I suggest you don’t ride with me. It’s
-              safer — and funnier — to just walk. 😅🚲
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                4
+              </span>
+              Once I gave my friend a ride on my bike… we crashed…<br/>
+              So yeah, I suggest you don’t ride with me. It’s safer — and funnier — to just walk. 😅🚲
             </li>
           </ul>
         </div>
 
         <div class="bg-white rounded-xl shadow border overflow-hidden">
-          <img src="img/Anna.jpg" class="w-full object-cover h-[500px] mb-4" />
+          <img src="img/Iryna.jpg" class="w-full object-cover h-[700px] mb-4" />
           <h3 class="text-3xl font-bold mb-2 text-[var(--purple)] px-6">
             Iryna Kysil
           </h3>
-          <p class="italic text-sm mb-4 px-6">
+          <p class="italic text-sm mb-4 px-6 text-xl">
             Administrative/Finance assistant
           </p>
           <ul class="list-disc list-inside text-gray-700 px-6 pb-6">
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                1
+              </span>
               I enjoy watching detective series - not the scary kind, but ones
               that really make you think.
             </li>
 
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--purple)] text-white rounded-full font-bold">
+                2
+              </span>
               I`m deeply interested in psychology and how the human mind
               works.🧠
             </li>
 
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--yellow)] text-white rounded-full font-bold">
+                3
+              </span>
               I grow flowers. I enjoy creating handmade bouquets from dried
               blooms for my family and friends🌸
             </li>
 
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                4
+              </span>
               My dream pet? A tiny African hedgehog - because they`re absolutely
               adorable animals, as for me.🦔
             </li>
 
-            <li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--purple)] text-white rounded-full font-bold">
+                5
+              </span>
               I truly appreciate kind, thoughtful people and believe that
               positive energy makes the best company💛
             </li>
@@ -206,13 +302,42 @@
         </div>
 
         <div class="bg-white rounded-xl shadow border overflow-hidden">
-          <img src="img/Anna.jpg" class="w-full object-cover h-[500px] mb-4" />
+          <img src="img/Asya.jpg" class="w-full object-cover h-[700px] mb-4" />
           <h3 class="text-3xl font-bold mb-2 text-[var(--purple)] px-6">
             Asya Samokhatnia
           </h3>
-          <p class="italic text-sm mb-4 px-6">Affiliate Manager</p>
+          <p class="italic text-sm mb-4 px-6 text-xl">Affiliate Manager</p>
           <ul class="list-disc list-inside text-gray-700 px-6 pb-6">
-            <li></li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                1
+              </span>
+              I love horror movies — can’t resist a good scare! 👻
+            </li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--purple)] text-white rounded-full font-bold">
+                2
+              </span>
+              I can play two musical instruments — double the talent, double the fun. 🎹🎸
+            </li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--yellow)] text-white rounded-full font-bold">
+                3
+              </span>
+              I’ve been dancing for most of my life — the stage feels like home. 💃
+            </li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--orange)] text-white rounded-full font-bold">
+                4
+              </span>
+              I’m into skipping — not just for kids, it’s my kind of workout. 🔄
+            </li>
+            <li class="text-xl relative px-12 py-2 bg-[#f4f4f4] mb-4">
+              <span class="absolute top-0.5 left-2 w-8 h-8 flex items-center justify-center bg-[var(--purple)] text-white rounded-full font-bold">
+                5
+              </span>
+              I’m a very curious person — always learning and discovering something new. 🤓
+            </li>
           </ul>
         </div>
       </div>
@@ -222,7 +347,9 @@
       <h2 class="text-4xl font-bold text-center mb-12 text-[var(--orange)]">
         The One with the Questionnaire 📝
       </h2>
-
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        This year Ann marked her 10-year work anniversary!  Are there any insights to share?
+      </p>
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         <div class="flex justify-center md:justify-start">
           <img
@@ -236,23 +363,19 @@
           class="bg-[var(--beige,#fdfdfd)] rounded-xl shadow-lg p-8 space-y-6"
         >
           <div>
-            <p class="font-semibold text-[var(--purple)]">Full Name</p>
+            <p class="font-semibold text-[var(--purple)] italic text-2xl">Full Name</p>
             <p>Anna Zolotarova</p>
           </div>
           <div>
-            <p class="font-semibold text-[var(--purple)]">Role</p>
-            <p>Team Leader of Mobtika</p>
-          </div>
-          <div>
-            <p class="font-semibold text-[var(--purple)]">1. How you doin’?</p>
+            <p class="font-semibold text-[var(--purple)] italic text-2xl">How you doin’?</p>
             <p>
               All good here! Just channeling my inner Chandler with a little
               humor.
             </p>
           </div>
           <div>
-            <p class="font-semibold text-[var(--purple)]">
-              2. What’s your “pivot” moment at work – a time when everything had
+            <p class="font-semibold text-[var(--purple)] italic text-2xl">
+              What’s your “pivot” moment at work – a time when everything had
               to suddenly change?
             </p>
             <p>
@@ -261,8 +384,8 @@
             </p>
           </div>
           <div>
-            <p class="font-semibold text-[var(--purple)]">
-              3. What’s your go-to comfort snack during a stressful deadline?
+            <p class="font-semibold text-[var(--purple)] italic text-2xl">
+              What’s your go-to comfort snack during a stressful deadline?
             </p>
             <p>
               Definitely coffee. It’s like a little magic potion to get through
@@ -270,15 +393,15 @@
             </p>
           </div>
           <div>
-            <p class="font-semibold text-[var(--purple)]">
-              4. If your job were a Friends episode title, what would it be
+            <p class="font-semibold text-[var(--purple)] italic text-2xl">
+              If your job were a Friends episode title, what would it be
               called?
             </p>
             <p>The One With the Never-Ending Email Thread.</p>
           </div>
           <div>
-            <p class="font-semibold text-[var(--purple)]">
-              5. What's one thing the team doesn't know about you... yet?
+            <p class="font-semibold text-[var(--purple)] italic text-2xl">
+              What's one thing the team doesn't know about you... yet?
             </p>
             <p>
               I can speak a little French. (Okay, maybe just “Je m’appelle
@@ -289,7 +412,7 @@
       </div>
     </section>
 
-    <section class="bg-white py-16 px-6 text-center" id="friendsQuiz">
+    <section class="bg-3 py-16 px-6 text-center" id="friendsQuiz">
       <h2 class="text-4xl font-bold text-[var(--purple)] mb-8">
         Which Friends character are you? 🎤
       </h2>
@@ -333,11 +456,16 @@
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
-          <img
-            src="img/barcelona.jpg"
-            alt="Barcelona"
-            class="w-full object-cover h-[360px]"
-          />
+        <div class="swiper carousel-barcelona">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/barcelona1.jpg" alt="Barcelona 1" class="w-full object-cover h-[360px]"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/barcelona2.jpg" alt="Barcelona 2" class="w-full object-cover h-[360px]"/>
+            </div>
+          </div>
+          </div>
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2">
               ✈️ The One Where Yulia Went to Barcelona
@@ -353,18 +481,26 @@
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
-          <img
-            src="img/seville.jpg"
-            alt="Seville"
-            class="w-full object-cover h-[360px]"
-          />
+        <div class="swiper carousel-seville">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/seville1.jpg" alt="Seville 1" class="w-full object-cover h-[360px]"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/seville2.jpg" alt="Seville 2" class="w-full object-cover h-[360px]"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/seville3.jpg" alt="Seville 3" class="w-full object-cover h-[360px]"/>
+            </div>
+          </div>
+          </div>
 
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2">
               🌺 The One with Seville’s Spring Vibes
             </h3>
             <p>
-              March took Aliona and Vika to the charming streets of Seville,
+              March took Alyona and Vika to the charming streets of Seville,
               where the orange trees were blooming — and so were new ideas.
             </p>
           </div>
@@ -373,18 +509,23 @@
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
-          <img
-            src="img/malta.jpg"
-            alt="Malta"
-            class="w-full object-cover h-[360px]"
-          />
+        <div class="swiper carousel-malta">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/malta1.jpg" alt="Malta 1" class="w-full object-cover h-[360px]"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/malta2.jpg" alt="Malta 2" class="w-full object-cover h-[360px]"/>
+            </div>
+          </div>
+          </div>
 
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2">
               ☀️ The One Where They Almost Moved to Malta
             </h3>
             <p class="mb-4">
-              In June, Aliona and Anzhelika landed on the sunny island of Malta.
+              In June, Alyona and Anzhelika landed on the sunny island of Malta.
             </p>
             <p class="italic text-gray-700">
               "Hi, sunny Malta welcomed us this June ☀️<br />The embankment
@@ -399,15 +540,26 @@
         <div
           class="relative bg-[var(--beige)] rounded-xl shadow-lg overflow-hidden border-8 border-[var(--yellow)]"
         >
-          <img
-            src="img/london.jpg"
-            alt="London"
-            class="w-full object-cover h-[360px]"
-          />
+        <div class="swiper carousel-london">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/london1.jpg" alt="London 1" class="w-full object-cover h-[360px]"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/london2.jpg" alt="London 2" class="w-full object-cover h-[360px]"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/london3.jpg" alt="London 3" class="w-full object-cover h-[360px]"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/london4.jpg" alt="London 4" class="w-full object-cover h-[360px]"/>
+            </div>
+          </div>
+          </div>
 
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2">
-              ☔ The One with Jane in London
+              ☔ The One with Vika in London
             </h3>
             <p class="mb-4">
               And just recently in July, Vika took on London — tea, rain, and
@@ -458,16 +610,17 @@
       </div>
     </section>
 
-    <section class="bg-beige py-16 px-6">
+    <section class="bg-4 py-16 px-6 overflow-hidden">
+      <div class="bg-white rounded-xl shadow border w-fit mx-auto px-4 py-6 mb-12">
       <h2 class="text-4xl font-bold text-[#B088C4] mb-6 text-center">
-        The One with the Cake 🎂
+        The One with Birthdays&Holidays 🎂
       </h2>
-      <p class="text-center text-gray-700 max-w-3xl mx-auto mb-12">
+      <p class="text-center text-gray-700 max-w-3xl mx-auto">
         Birthdays, company anniversaries, and holidays — because every reason to
         celebrate is a good reason.<br />
         Could we BE any more festive? 🎉
       </p>
-
+    </div>
       <div class="container-grid">
         <article class="bg-white rounded-xl shadow border p-6">
           <h3 class="text-2xl font-bold text-[#FF914D] mb-4 text-center">
@@ -488,21 +641,15 @@
             <div class="day-cell">1</div>
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               4
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Alina Heorhieva – Anniversary 🎊 ☕
-              </div>
             </div>
             <div class="day-cell">5</div>
             <div class="day-cell">6</div>
             <div class="day-cell">7</div>
             <div class="day-cell">8</div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               9
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Viktoria Kleban – Anniversary 🎉 ☕
-              </div>
             </div>
             <div class="day-cell">10</div>
             <div class="day-cell">11</div>
@@ -565,14 +712,11 @@
                 Lisa Travenko – Birthday 🎂 ☕
               </div>
             </div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               5
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Oleksandr Bondarenko – Anniversary 🎊 ☕
-              </div>
             </div>
             <div class="day-cell">6</div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               7
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Oksana Bulatova – Anniversary 🎉 ☕
@@ -636,14 +780,11 @@
             </div>
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               4
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Anzhelika Ionina – Anniversary 🎊 ☕
-              </div>
             </div>
             <div class="day-cell">5</div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               6
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Anastasia Rusinova – Anniversary 🎉 ☕
@@ -694,13 +835,10 @@
             <div class="weekday">F</div>
             <div class="weekday">S</div>
             <div class="weekday">S</div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               1
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Olga Chernova – Anniversary 🎊 ☕
-              </div>
             </div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               2
               <div class="tooltip" role="tooltip" aria-hidden="true">
                 Karyna Serebrianska – Anniversary 🎉 ☕
@@ -708,19 +846,13 @@
             </div>
             <div class="day-cell">3</div>
             <div class="day-cell">4</div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               5
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Marina Khashchivska – Anniversary 🎊 ☕
-              </div>
             </div>
             <div class="day-cell">6</div>
             <div class="day-cell">7</div>
             <div class="day-cell">
               8
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Kate Korkishko – Anniversary 🎊 ☕
-              </div>
             </div>
             <div class="day-cell">9</div>
             <div class="day-cell">10</div>
@@ -764,11 +896,8 @@
             <div class="empty"></div>
             <div class="empty"></div>
             <div class="empty"></div>
-            <div class="day-cell anniversary" tabindex="0">
+            <div class="day-cell">
               1
-              <div class="tooltip" role="tooltip" aria-hidden="true">
-                Inna Bytsenko – Anniversary 🎊 ☕
-              </div>
             </div>
             <div class="day-cell">2</div>
             <div class="day-cell">3</div>
@@ -810,7 +939,108 @@
       </div>
     </section>
 
-    <section class="bg-2 py-16 px-8">
+    <section class="bg-white py-16 px-8">
+      <h2 class="text-4xl font-bold text-center mb-12 text-[var(--purple)]">
+        The One with the Workiversaries 🎉
+      </h2>
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Let’s give a big round of applause to our teammates reaching new anniversaries:</p>
+      <div class="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Viktoria Kleban</h3>
+          <p class="text-gray-600 mb-2">August</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            9 years
+          </span>
+        </div>
+    
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Alina Heorhieva</h3>
+          <p class="text-gray-600 mb-2">August</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            4 years
+          </span>
+        </div>
+    
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Oleksandr Bondarenko</h3>
+          <p class="text-gray-600 mb-2">September</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            5 years
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Oksana Bulatova</h3>
+          <p class="text-gray-600 mb-2">September</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            7 years
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Karyna Serebrianska</h3>
+          <p class="text-gray-600 mb-2">October</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            2 years
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Anzhelika Ionina</h3>
+          <p class="text-gray-600 mb-2">October</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            4 years
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Olga Chernova</h3>
+          <p class="text-gray-600 mb-2">November</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            1 year
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Marina Khashchivska</h3>
+          <p class="text-gray-600 mb-2">November</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            5 years
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Karyna Serebrianska</h3>
+          <p class="text-gray-600 mb-2">November</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            2 years
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Kate Korkishko</h3>
+          <p class="text-gray-600 mb-2">November</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            8 years
+          </span>
+        </div>
+
+        <div class="bg-[var(--beige)] rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+          <h3 class="text-2xl font-semibold text-[var(--orange)]">Inna Bytsenko</h3>
+          <p class="text-gray-600 mb-2">December</p>
+          <span class="bg-[var(--turquoise)] text-white px-3 py-1 rounded-full text-mb font-medium">
+            1 year
+          </span>
+        </div>
+      </div>
+      <div class="text-center mt-12 max-w-2xl mx-auto mb-5">
+        <p class="text-lg">
+          Thank you for your dedication, ideas, and everything you bring to the team.<br/>We’re lucky to have you!
+        </p>
+      </div>
+    </section>   
+
+    <section class="bg-5 py-16 px-8">
       <h2 class="text-4xl font-bold text-center mb-8 text-white">
         Monica’s Tips & Tricks ☕
       </h2>
@@ -2158,9 +2388,9 @@
       </div>
     </section>
 
-    <footer class="bg-[var(--turquoise)] text-white text-center py-16 px-8">
+    <footer class="bg-6 text-white text-center py-16 px-8 h-[560px]">
       <h2 class="text-4xl font-bold text-center mb-8 text-white">Thanks for reading. Could this BE any more fun?</h1>
-       <div class="relative max-w-xl mx-auto mb-10">
+       <div class="relative max-w-xl mx-auto mb-10 hidden">
         <img class="rounded-xl w-[200px] mx-auto" src="img/welcome.gif"/>
       </div>
     </footer>
