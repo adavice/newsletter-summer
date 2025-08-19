@@ -12,9 +12,13 @@
 h1,
 h2,
 h3,
-h4, li {
+h4 {
   font-family: "Caveat", cursive;
   font-style: italic;
+}
+
+li, p{
+  line-height: 2rem !important;
 }
 
 .italic {
@@ -72,6 +76,14 @@ body {
   background-size: cover;
 }
 
+.bg-7{
+  background-image: url(../img/bg-7.jpg);
+  background-position: center;
+  background-color: #fdf6eede;
+  background-blend-mode: color;
+  background-repeat: repeat;
+}
+
 #videoDiv {
   top: 50%;
   left: 50%;
@@ -83,7 +95,7 @@ body {
   grid-template-columns: repeat(7, 1fr);
   gap: 6px;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 1rem;
   user-select: none;
 }
 .weekday {
@@ -121,7 +133,7 @@ body {
   pointer-events: none;
   transition: opacity 0.25s ease;
   font-weight: normal;
-  font-size: 0.75rem;
+  font-size: 1rem;
   z-index: 20;
 }
 .day-cell:hover .tooltip {
@@ -221,6 +233,11 @@ li::marker {content: none;}
     width: 2.2rem;
     height: 2.2rem;
     line-height: 2.2rem;
+  }
+
+  .day-cell:hover .tooltip{
+    width: 200px;
+    white-space: wrap;
   }
 }
 

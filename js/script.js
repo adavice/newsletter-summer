@@ -113,7 +113,7 @@ function loadQuestion() {
         const btn = document.createElement("button");
         btn.textContent = answer.text;
         btn.className =
-            "w-full bg-white border border-gray-300 rounded-lg py-2 hover:bg-gray-100 transition";
+            "w-full bg-white border border-gray-300 rounded-lg py-2 hover:bg-gray-100 transition text-lg";
         btn.onclick = () => selectAnswer(btn, answer.character);
         answersContainer.appendChild(btn);
     });
@@ -162,12 +162,12 @@ function showResult() {
     // Result text
     const title = document.createElement("h2");
     title.textContent = `You are ${topCharacter}!`;
-    title.className = "text-2xl font-bold mb-2 text-[var(--orange)]";
+    title.className = "text-3xl font-bold mb-2 text-[var(--orange)]";
     resultContainer.appendChild(title);
 
     const description = document.createElement("p");
     description.textContent = characterDescriptions[topCharacter];
-    description.className = "mb-4";
+    description.className = "text-lg mb-4";
     resultContainer.appendChild(description);
 }
 
